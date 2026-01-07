@@ -862,10 +862,11 @@ html {
   .nav-toggle[aria-expanded="true"] .hamburger::after { transform: rotate(-45deg); }
 
   header h1 { font-size: 1.4rem; }
-
+ /* Cacher la flèche 'Défiler' sur mobile pour économiser l'espace */
+  .scroll-down { display: none !important; }
   /* Sections grid */
   .skills-list { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .projects-gallery { grid-template-columns: 1fr; gap: 1rem; }
+  .projects-gallery { grid-template-columns: 1fr; gap: 1rem; min-height: 120px; }
   .project-card { padding: 1rem; }
   .project-card img { max-width: 100%; height: auto; }
 
