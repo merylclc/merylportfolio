@@ -898,3 +898,11 @@ html {
   nav a { min-height: 44px; display: inline-flex; align-items: center; }
   .cta-button { min-height: 44px; }
 }
+
+@media (max-width: 768px) {
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
