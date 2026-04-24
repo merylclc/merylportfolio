@@ -12,6 +12,22 @@
   --border: #222b3a;
   --shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
   --header-height: 70px;
+  --header-bg: rgba(5, 6, 12, 0.95);
+  --nav-bg: #151a23;
+  --text-muted: #a0aec0;
+}
+
+[data-theme="light"] {
+  --primary: #4a6cf7;
+  --background: #f0f4ff;
+  --card: #ffffff;
+  --text: #1e2340;
+  --accent: #4a6cf7;
+  --border: #d0d9f2;
+  --shadow: 0 2px 8px 0 rgba(74,108,247,0.08);
+  --header-bg: rgba(245, 248, 255, 0.96);
+  --nav-bg: #f0f4ff;
+  --text-muted: #64748b;
 }
 
 *, *::before, *::after {
@@ -39,6 +55,20 @@ body {
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="light"] body {
+  background:
+    radial-gradient(120% 80% at 50% 35%, rgba(255,255,255,0) 55%, rgba(240,244,255,0.5) 100%),
+    linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
+    linear-gradient(0deg, rgba(74,108,247,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74,108,247,0.06) 1px, transparent 1px),
+    radial-gradient(600px 400px at 70% 10%, rgba(74,108,247,0.07), transparent 60%),
+    radial-gradient(500px 300px at 20% 10%, rgba(74,108,247,0.07), transparent 90%),
+    linear-gradient(180deg, rgba(74,108,247,0.04), transparent 30%),
+    var(--background);
+  background-size: auto, auto, 28px 28px, 28px 28px, auto, auto, auto;
 }
 
 /* =====================================================
@@ -96,8 +126,9 @@ header {
   justify-content: space-between;
   padding: 0 2rem;
   gap: 1rem;
-  background: rgba(5, 6, 12, 0.95);
+  background: var(--header-bg);
   backdrop-filter: blur(10px);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
   border-bottom: 1px solid rgba(100, 130, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border-radius: 0 0 1rem 1rem;
@@ -297,7 +328,7 @@ section h2 {
 .hero-subtitle {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   margin: 0 auto 2.5rem;
-  color: #e2e8f0;
+  color: var(--text);
   max-width: 600px;
   line-height: 1.6;
 }
@@ -510,7 +541,7 @@ section h2 {
 }
 
 .experience .date {
-  color: #a0aec0;
+  color: var(--text-muted);
   font-style: italic;
   margin: 4px 0 14px;
   font-size: 0.88rem;
@@ -812,7 +843,7 @@ section h2 {
 
 .alternance-text span {
   font-size: 0.75rem;
-  color: #a0aec0;
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
@@ -845,12 +876,48 @@ section h2 {
 }
 
 /* =====================================================
+   THEME TOGGLE BUTTON
+   ===================================================== */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  background: rgba(123, 165, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: rotate(15deg);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Sun shown in dark mode, moon in light mode */
+.icon-moon { display: none; }
+
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
+/* =====================================================
    FOOTER
    ===================================================== */
 footer {
   text-align: center;
   padding: 2rem 1.5rem 1rem;
-  color: #888;
+  color: var(--text-muted);
   font-size: 0.95rem;
   background: transparent;
 }
@@ -929,7 +996,7 @@ main, section, .project-card, header, footer {
     top: var(--header-height);
     left: 0;
     right: 0;
-    background: #151a23;
+    background: var(--nav-bg);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     border-radius: 0 0 1rem 1rem;

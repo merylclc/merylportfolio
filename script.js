@@ -1,3 +1,17 @@
+// --- Theme toggle ---
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  });
+})();
+
 // Exemple de projets (à personnaliser)
 const projects = [
   {
