@@ -16,6 +16,85 @@ const competences = [
 
 const projects = [
   {
+    name: "infra-active-directory",
+    title: "Infrastructure Active Directory",
+    banner: "active-directory.png",
+    img: "active-directory.png",
+    desc: "Mise en place d'une infrastructure Active Directory complète sous Windows Server dans le cadre d'un environnement d'entreprise simulé. Le projet couvre la création du domaine, la structuration des Unités d'Organisation (OU), la gestion centralisée des comptes utilisateurs et la configuration des services réseau associés (DHCP, DNS).",
+    vision: "Maîtriser l'administration d'un domaine Windows en entreprise et comprendre comment les GPO permettent de standardiser et sécuriser les postes de travail à grande échelle, compétence clé dans tout environnement professionnel.",
+    stack: ["Windows Server", "Active Directory", "GPO", "DHCP", "DNS"],
+    features: [
+      "Création et configuration d'un domaine Active Directory",
+      "Structuration des Unités d'Organisation (OU) par service",
+      "Gestion des utilisateurs, groupes et permissions",
+      "Déploiement de stratégies de groupe (GPO) : fond d'écran, restrictions, scripts de connexion",
+      "Configuration du service DHCP avec plages d'adresses et réservations",
+      "Configuration du serveur DNS avec zones de recherche directe et inversée",
+      "Jonction de postes clients au domaine",
+      "Délégation d'administration et gestion des droits"
+    ],
+    link: "#"
+  },
+  {
+    name: "segmentation-vlan",
+    title: "Segmentation Réseau VLAN",
+    banner: "vlan-reseau.png",
+    img: "vlan-reseau.png",
+    desc: "Conception et mise en œuvre d'une infrastructure réseau segmentée avec deux VLANs sur switches managés Cisco 2960, reliés par un lien trunk. Le projet couvre la création des VLANs (VLAN 10 — réseau 10.0.0.0/24 et VLAN 20 — réseau 172.16.0.0/24), la configuration des ports access pour les postes clients et la mise en place du lien trunk avec trames taggées entre les deux switches.",
+    vision: "Comprendre et appliquer la segmentation réseau comme levier de sécurité et de performance, en isolant des périmètres distincts pour limiter la propagation des menaces et maîtriser les flux entre équipements.",
+    stack: ["Cisco IOS", "Cisco 2960", "VLAN", "Trunk 802.1Q", "Packet Tracer"],
+    features: [
+      "Création de deux VLANs : VLAN 10 (10.0.0.0/24) et VLAN 20 (172.16.0.0/24)",
+      "Configuration des ports access sur chaque switch pour affecter les postes clients au bon VLAN",
+      "Mise en place du lien trunk 802.1Q (Tagged Frames) entre Switch1 et Switch2 via F0/24",
+      "Les PCs du même VLAN communiquent entre switches via le trunk",
+      "Isolation complète entre VLAN 10 et VLAN 20 — aucun flux direct possible",
+      "Tests de connectivité intra-VLAN validés par ping entre PC1↔PC2 et PC3↔PC4",
+      "Simulation réalisée sous Cisco Packet Tracer"
+    ],
+    link: "#"
+  },
+  {
+    name: "firewall-pfsense",
+    title: "Pare-feu & Sécurité Réseau",
+    banner: "pfsense.png",
+    img: "pfsense.png",
+    desc: "Déploiement et configuration d'un pare-feu pfSense avec remontée des logs vers Grafana pour la supervision et l'analyse du trafic réseau. Les données pfSense sont collectées et visualisées dans un dashboard Grafana offrant une cartographie GeoIP des IPs bloquées, l'analyse des ports les plus ciblés et le suivi des alertes en temps réel.",
+    vision: "Appréhender la sécurité périmétrique en conditions réelles : apprendre à configurer un pare-feu open source et à exploiter ses logs via un outil de visualisation professionnel comme Grafana, pour surveiller, analyser et réagir aux menaces réseau.",
+    stack: ["pfSense", "Grafana", "NAT", "GeoIP", "Règles de filtrage"],
+    features: [
+      "Configuration du pare-feu pfSense : interfaces WAN, LAN, règles de filtrage",
+      "Configuration du NAT pour l'accès internet des postes clients",
+      "Remontée des logs pfSense vers Grafana pour la centralisation et la visualisation",
+      "Dashboard Grafana avec graphiques de trafic réseau en temps réel",
+      "Cartographie GeoIP des adresses IP sources bloquées par pays",
+      "Analyse des Top Source Ports et Destination Ports les plus ciblés",
+      "Suivi des 10 principales sources d'alertes (Top 10 Alert Generators)",
+      "Blocage de plages IP et réduction de la surface d'attaque"
+    ],
+    link: "#"
+  },
+  {
+    name: "nmap-scanner",
+    title: "Mini Scanner TCP",
+    banner: "nmap-scanner.png",
+    img: "nmap-scanner.png",
+    desc: "Scanner de ports TCP développé en Python, inspiré de Nmap. L'outil permet de détecter l'état des ports (open, closed, filtered) sur localhost via des connexions TCP parallèles, avec un affichage en tableau console et un export JSON optionnel. Conçu dans une optique pédagogique, il respecte les limites légales en se restreignant à la cible 127.0.0.1.",
+    vision: "Explorer les bases du réseau et de la cybersécurité à travers la programmation Python. Ce projet m'a permis de comprendre le fonctionnement des sockets TCP, la gestion de la concurrence avec ThreadPoolExecutor, et les concepts de scan de ports utilisés en sécurité informatique.",
+    stack: ["Python", "Socket", "ThreadPoolExecutor", "JSON"],
+    features: [
+      "Scan TCP connect() pour détecter les ports open / closed / filtered",
+      "Scan multi-threadé (ThreadPoolExecutor) pour des performances élevées",
+      "Parsing flexible de plages de ports (ex : 22,80,443 ou 1-1024)",
+      "Affichage en tableau console avec état, RTT et détail de chaque port",
+      "Export optionnel des résultats au format JSON",
+      "Résumé final : nombre de ports open, closed, filtered et durée du scan",
+      "Gardes-fous pédagogiques : cible limitée à localhost, max 2048 ports, timeout contrôlé",
+      "Support IPv4 et IPv6 via getaddrinfo"
+    ],
+    link: "#"
+  },
+  {
     name: "mes-outils-scolaires",
     title: "Mes outils Scolaires",
     banner: "mesoutilsscolaires-banner.png",
