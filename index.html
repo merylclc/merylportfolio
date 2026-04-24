@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Badge alternance flottant -->
+  <div class="alternance-badge">
+    <div class="alternance-dot-row">
+      <span class="alternance-dot"></span>
+      <span>Disponible</span>
+    </div>
+    <div class="alternance-text">
+      <strong>Recherche d'alternance</strong>
+      <span>Septembre 2026</span>
+    </div>
+    <a href="#contact" class="alternance-btn">Me contacter</a>
+  </div>
+
   <header>
     <h1>Meryl BOUDENE</h1>
     <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
@@ -18,6 +32,7 @@
       <a href="#competences">Compétences</a>
       <a href="#experiences">Expériences</a>
       <a href="#projets">Projets</a>
+      <a href="#outils">Outils</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -30,10 +45,10 @@
         <div class="hero-text">
           <h1>Meryl BOUDENE</h1>
           <div class="hero-tagline">
-            <span class="typing-text">Cybersécurité & Programmation</span>
+            <span class="typing-text"></span>
             <span class="cursor">|</span>
           </div>
-          <p class="hero-subtitle">Développeur passionné par la sécurité informatique et l'innovation technologique</p>
+          <p class="hero-subtitle">Passionné par l'informatique, les réseaux et le développement logiciel</p>
           <div class="hero-cta">
             <a href="#competences" class="cta-button">Découvrir mon profil</a>
             <a href="#contact" class="cta-button outline">Me contacter</a>
@@ -48,22 +63,50 @@
       </a>
     </section>
 
+    <!-- Barre de filtre globale -->
+    <div class="filter-bar" id="filter-bar">
+      <span class="filter-label">Afficher :</span>
+      <button class="filter-btn active" data-filter="all">Tout</button>
+      <button class="filter-btn" data-filter="dev">Développement</button>
+      <button class="filter-btn" data-filter="reseau">Réseau</button>
+    </div>
+
     <!-- Nouvelle section compétences -->
     <section id="competences">
       <h2>Compétences</h2>
       <ul class="skills-list">
-        <li>Programmation C++ / C# / C</li>
-        <li>Programmation Python</li>
-        <li>Langage SQL</li>
-        <li>Programmation Windev</li>
-        <li>Électronique Arduino / Raspberry</li>
-        <li>Réseau informatique</li>
-        <li>Active Directory</li>
-        <li>Maintenance informatique</li>
+        <!-- Programmation -->
+        <li data-cat="dev">Programmation C++ / C# / C</li>
+        <li data-cat="dev">Programmation Python (IHM)</li>
+        <li data-cat="dev">Programmation Windev</li>
+        <li data-cat="dev">Programmation PHP</li>
+        <!-- Développement Web -->
+        <li data-cat="dev">HTML / CSS / JavaScript</li>
+        <li data-cat="dev">Développement Web Full Stack</li>
+        <!-- Frameworks & Librairies -->
+        <li data-cat="dev">.NET / .NET MAUI</li>
+        <li data-cat="dev">Unity3D (C#)</li>
+        <li data-cat="dev">PyQt6 / PySerial</li>
+        <li data-cat="dev">WinForms</li>
+        <li data-cat="dev">WinUI</li>
+        <!-- Bases de données -->
+        <li data-cat="dev">Langage SQL</li>
+        <li data-cat="dev">MySQL / MySQL Workbench</li>
+        <!-- Réseau & Infrastructure -->
+        <li data-cat="reseau">Active Directory, GPO, OU</li>
+        <li data-cat="reseau">Configuration Routeur & Switch</li>
+        <li data-cat="reseau">Mise en place de VLAN</li>
+        <li data-cat="reseau">Configuration LAN / WAN</li>
+        <li data-cat="reseau">Services réseau : DHCP, DNS, NAT</li>
+        <li data-cat="reseau">Gestion des pare-feu et filtrage</li>
+        <!-- Systèmes & Matériel -->
+        <li data-cat="dev reseau">Électronique Arduino / Raspberry Pi</li>
+        <li data-cat="reseau">Maintenance informatique</li>
+        <!-- Sécurité & Bas niveau -->
+        <li data-cat="dev reseau">Scan & audit réseau TCP/IP</li>
+        <li data-cat="dev">Programmation Socket / Multi-threading</li>
       </ul>
     </section>
-
-  </section>
 
   <!-- Nouvelle section Expériences Professionnelles -->
   <section id="experiences">
@@ -108,12 +151,106 @@
     <!-- Projets dynamiques JS -->
   </div>
 </section>
+
+    <section id="outils">
+      <h2>Outils & Environnement</h2>
+      <div class="tools-grid">
+
+        <!-- Développement -->
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code">
+          <span>VS Code</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+          <span>Git</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub">
+          <span>GitHub</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+          <span>Python</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
+          <span>C#</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" alt=".NET">
+          <span>.NET</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+          <span>HTML5</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+          <span>CSS3</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL">
+          <span>MySQL</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" alt="Unity3D">
+          <span>Unity3D</span>
+        </div>
+        <div class="tool-card" data-cat="dev">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP">
+          <span>PHP</span>
+        </div>
+
+        <!-- Réseau & Système -->
+        <div class="tool-card" data-cat="dev reseau">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux">
+          <span>Linux</span>
+        </div>
+        <div class="tool-card" data-cat="reseau">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="Windows Server">
+          <span>Windows Server</span>
+        </div>
+        <div class="tool-card" data-cat="reseau">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana">
+          <span>Grafana</span>
+        </div>
+        <div class="tool-card tool-card--text" data-cat="reseau">
+          <div class="tool-icon-text" style="background:#1679A7;">WS</div>
+          <span>Wireshark</span>
+        </div>
+        <div class="tool-card tool-card--text" data-cat="reseau">
+          <div class="tool-icon-text" style="background:#1BA0D7;">PT</div>
+          <span>Packet Tracer</span>
+        </div>
+        <div class="tool-card tool-card--text" data-cat="reseau">
+          <div class="tool-icon-text" style="background:#c0392b;">pf</div>
+          <span>pfSense</span>
+        </div>
+        <div class="tool-card tool-card--text" data-cat="dev reseau">
+          <div class="tool-icon-text" style="background:#183A61;">VB</div>
+          <span>VirtualBox</span>
+        </div>
+
+      </div>
+    </section>
+
     <section id="contact">
       <h2>Contact</h2>
       <div class="contact-links">
         <a href="mailto:merylboudene.contact@gmail.com">Mail</a>
         <a href="https://www.linkedin.com/in/meryl-boudene-4b113b263/" target="_blank">LinkedIn</a>
         <a href="https://github.com/merylclc" target="_blank">GitHub</a>
+        <a href="cv.pdf" download class="cv-download">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Télécharger mon CV
+        </a>
       </div>
     </section>
   </main>
