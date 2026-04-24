@@ -307,27 +307,26 @@ function renderProjectDetail(proj) {
   ${proj.documentationLink ? `
     <div style="margin: 1.5rem 0;">
       <h3>Documentation</h3>
-      <a href="${proj.documentationLink}" target="_blank" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #2d3748; color: white; border-radius: 4px; text-decoration: none;">
+      <a href="${proj.documentationLink}" target="_blank" class="doc-link">
         Télécharger la documentation (PDF)
       </a>
     </div>` : ''}
-    <div style="background:#222b3a;padding:1rem 0.5rem 1rem 0.5rem;border-radius:1rem;margin-bottom:1.5rem;">
-      <div style="color:lime;font-size:1.1rem;"></div>
+    <div class="project-detail-card">
       <div style="margin-bottom:2.5rem;">
         <img src="${proj.banner || proj.img}" alt="Bannière" style="width:100%; max-width:900px; display:block; margin:auto; border-radius:1.5rem; box-shadow:0 6px 40px rgba(48,86,211,0.10); object-fit:cover;">
       </div>
-      <h2 style="margin-bottom:1.2rem;">${proj.title}</h2>
+      <h2 class="project-detail-title">${proj.title}</h2>
       <div style="margin-bottom:1.1rem;">
         ${proj.stack.map(tech => `<span class="badge-tech">${tech}</span>`).join(' ')}
       </div>
-      <p style="font-size:1.13rem; margin-bottom:1.3rem;">${proj.desc}</p>
+      <p class="project-detail-desc">${proj.desc}</p>
       <div style="margin-bottom:1.5rem;">
         <strong>Vision communautaire :</strong><br>
-        <span style="font-size:1.05rem; color:var(--primary)">${proj.vision || ''}</span>
+        <span class="project-detail-vision">${proj.vision || ''}</span>
       </div>
       <div style="margin-bottom:1.2rem;">
         <strong>Fonctionnalités principales :</strong>
-        <ul>${proj.features.map(f => `<li>${f}</li>`).join('')}</ul>
+        <ul class="project-detail-features">${proj.features.map(f => `<li>${f}</li>`).join('')}</ul>
       </div>
       ${proj.link && proj.link !== "#" ? `<a href="${proj.link}" class="contact-links" target="_blank">Accéder au projet</a>` : ''}
     </div>

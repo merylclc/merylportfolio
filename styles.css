@@ -876,6 +876,65 @@ section h2 {
 }
 
 /* =====================================================
+   PROJECT DETAIL PAGE
+   ===================================================== */
+.project-detail-card {
+  background: var(--card);
+  color: var(--text);
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.project-detail-title {
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+
+.project-detail-desc {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+  line-height: 1.7;
+}
+
+.project-detail-vision {
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.project-detail-features {
+  color: var(--text);
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.project-detail-features li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.doc-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--card);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.doc-link:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* =====================================================
    THEME TOGGLE BUTTON
    ===================================================== */
 .theme-toggle {
