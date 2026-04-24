@@ -572,7 +572,7 @@ section h2 {
 }
 
 /* =====================================================
-   DIPLOMES SECTION
+   DIPLOMES SECTION — TIMELINE
    ===================================================== */
 #diplomes {
   padding: 4rem 0 2rem;
@@ -583,65 +583,82 @@ section h2 {
   margin-bottom: 2.5rem;
 }
 
-.diplomes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.diplome-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  padding: 1.4rem 1.6rem;
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  text-align: left;
+.diplomes-timeline {
   position: relative;
-  box-shadow: var(--shadow);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  padding-left: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 0;
 }
 
-.diplome-card::before {
+/* Ligne verticale centrale */
+.diplomes-timeline::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 4px;
-  height: 100%;
+  left: 120px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
   background: linear-gradient(to bottom, var(--primary), #5e81f4);
-  border-radius: 1rem 0 0 1rem;
+  opacity: 0.4;
 }
 
-.diplome-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(16, 67, 207, 0.3);
-  border-color: rgba(123, 165, 255, 0.3);
+.diplome-entry {
+  display: grid;
+  grid-template-columns: 110px 24px 1fr;
+  align-items: flex-start;
+  gap: 0 1rem;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
-.diplome-icon {
-  font-size: 2rem;
+.diplome-year {
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding-top: 0.2rem;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.diplome-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--background);
+  box-shadow: 0 0 0 2px var(--primary);
+  margin: 0.2rem auto 0;
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(123, 165, 255, 0.1);
-  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.diplome-info {
-  flex: 1;
+.diplome-entry:hover .diplome-dot {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 3px var(--primary), 0 0 12px rgba(123,165,255,0.5);
 }
 
-.diplome-info h3 {
+.diplome-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.diplome-entry:hover .diplome-content {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(16, 67, 207, 0.2);
+  border-color: rgba(123, 165, 255, 0.35);
+}
+
+.diplome-content h3 {
   color: var(--primary);
-  margin: 0 0 0.25rem;
-  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -649,34 +666,38 @@ section h2 {
   color: var(--text);
   font-style: italic;
   margin: 0 0 0.15rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  opacity: 0.85;
 }
 
 .diplome-school {
   color: var(--accent);
   font-weight: 600;
-  margin: 0 0 0.3rem;
-  font-size: 0.95rem;
-}
-
-.diplome-date {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  font-style: italic;
+  margin: 0;
+  font-size: 0.88rem;
 }
 
 @media (max-width: 600px) {
-  .diplome-card {
-    padding: 1.1rem 1rem 1.1rem 1.2rem;
-    gap: 0.9rem;
+  .diplomes-timeline::before {
+    left: 80px;
   }
-  .diplome-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 1.6rem;
+  .diplome-entry {
+    grid-template-columns: 72px 20px 1fr;
+    gap: 0 0.6rem;
+    margin-bottom: 1.5rem;
   }
-  .diplome-info h3 {
-    font-size: 0.95rem;
+  .diplome-year {
+    font-size: 0.72rem;
+  }
+  .diplome-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .diplome-content {
+    padding: 0.8rem 0.9rem;
+  }
+  .diplome-content h3 {
+    font-size: 0.9rem;
   }
 }
 
