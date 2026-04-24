@@ -603,6 +603,7 @@ section h2 {
   position: relative;
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  padding-left: 1.8rem;
 }
 
 .diplome-card::before {
