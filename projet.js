@@ -73,17 +73,15 @@ const projects = [
     title: "Pare-feu & Sécurité Réseau",
     banner: "pfsense.png",
     img: "pfsense.png",
-    desc: "Déploiement et configuration d'un pare-feu pfSense avec remontée des logs vers Grafana pour la supervision et l'analyse du trafic réseau. Les données pfSense sont collectées et visualisées dans un dashboard Grafana offrant une cartographie GeoIP des IPs bloquées, l'analyse des ports les plus ciblés et le suivi des alertes en temps réel.",
-    vision: "Appréhender la sécurité périmétrique en conditions réelles : apprendre à configurer un pare-feu open source et à exploiter ses logs via un outil de visualisation professionnel comme Grafana, pour surveiller, analyser et réagir aux menaces réseau.",
-    stack: ["pfSense", "Grafana", "NAT", "GeoIP", "Règles de filtrage"],
+    desc: "Déploiement et configuration d'un pare-feu pfSense avec remontée des logs vers Grafana pour la supervision et l'analyse du trafic réseau. Les données pfSense sont collectées et visualisées dans un dashboard Grafana offrant une vue en temps réel du trafic réseau et de l'activité du pare-feu.",
+    vision: "Appréhender la sécurité périmétrique en conditions réelles : apprendre à configurer un pare-feu open source et à exploiter ses logs via un outil de visualisation professionnel comme Grafana, pour surveiller et analyser le trafic réseau.",
+    stack: ["pfSense", "Grafana", "NAT", "Règles de filtrage"],
     features: [
       "Configuration du pare-feu pfSense : interfaces WAN, LAN, règles de filtrage",
       "Configuration du NAT pour l'accès internet des postes clients",
       "Remontée des logs pfSense vers Grafana pour la centralisation et la visualisation",
       "Dashboard Grafana avec graphiques de trafic réseau en temps réel",
-      "Cartographie GeoIP des adresses IP sources bloquées par pays",
-      "Analyse des Top Source Ports et Destination Ports les plus ciblés",
-      "Suivi des 10 principales sources d'alertes (Top 10 Alert Generators)",
+      "Suivi de l'activité du pare-feu et du trafic LAN/WAN",
       "Blocage de plages IP et réduction de la surface d'attaque"
     ],
     link: "#"
