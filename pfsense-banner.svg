@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c1c2e"/>
+      <stop offset="100%" style="stop-color:#0a0a14"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e05a00"/>
+      <stop offset="100%" style="stop-color:#ff7b00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="400" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#ffffff06" stroke-width="1">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="600" y1="0" x2="600" y2="400"/>
+    <line x1="800" y1="0" x2="800" y2="400"/>
+  </g>
+
+  <!-- Orange accent bar left -->
+  <rect x="0" y="0" width="6" height="400" fill="url(#orange)"/>
+
+  <!-- pfSense shield shape -->
+  <g transform="translate(60, 80)">
+    <path d="M80 0 L160 30 L160 130 Q160 180 80 210 Q0 180 0 130 L0 30 Z" fill="#1a1a2e" stroke="url(#orange)" stroke-width="3"/>
+    <!-- pf text inside shield -->
+    <text x="80" y="105" font-family="Georgia, serif" font-size="58" font-weight="700" fill="url(#orange)" text-anchor="middle">pf</text>
+    <text x="80" y="145" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#ffffff60" text-anchor="middle" letter-spacing="4">SENSE</text>
+  </g>
+
+  <!-- Title -->
+  <text x="280" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700" fill="#ffffff">pfSense</text>
+  <text x="281" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#ff7b0099">Pare-feu &amp; Sécurité Réseau</text>
+
+  <!-- Right side info blocks -->
+  <g transform="translate(580, 90)">
+    <!-- Block WAN -->
+    <rect x="0" y="0" width="140" height="50" rx="6" fill="#ffffff08" stroke="#e05a0040" stroke-width="1"/>
+    <text x="70" y="20" font-family="monospace" font-size="11" fill="#ff7b00" text-anchor="middle">WAN</text>
+    <text x="70" y="36" font-family="monospace" font-size="10" fill="#ffffff80" text-anchor="middle">Interface externe</text>
+
+    <!-- Block LAN -->
+    <rect x="160" y="0" width="140" height="50" rx="6" fill="#ffffff08" stroke="#e05a0040" stroke-width="1"/>
+    <text x="230" y="20" font-family="monospace" font-size="11" fill="#ff7b00" text-anchor="middle">LAN</text>
+    <text x="230" y="36" font-family="monospace" font-size="10" fill="#ffffff80" text-anchor="middle">Réseau local</text>
+
+    <!-- Block Firewall -->
+    <rect x="0" y="70" width="140" height="50" rx="6" fill="#ffffff08" stroke="#e05a0040" stroke-width="1"/>
+    <text x="70" y="90" font-family="monospace" font-size="11" fill="#ff7b00" text-anchor="middle">FIREWALL</text>
+    <text x="70" y="106" font-family="monospace" font-size="10" fill="#ffffff80" text-anchor="middle">Règles de filtrage</text>
+
+    <!-- Block NAT -->
+    <rect x="160" y="70" width="140" height="50" rx="6" fill="#ffffff08" stroke="#e05a0040" stroke-width="1"/>
+    <text x="230" y="90" font-family="monospace" font-size="11" fill="#ff7b00" text-anchor="middle">NAT</text>
+    <text x="230" y="106" font-family="monospace" font-size="10" fill="#ffffff80" text-anchor="middle">Translation d'adresses</text>
+
+    <!-- Block DHCP -->
+    <rect x="0" y="140" width="140" height="50" rx="6" fill="#ffffff08" stroke="#e05a0040" stroke-width="1"/>
+    <text x="70" y="160" font-family="monospace" font-size="11" fill="#ff7b00" text-anchor="middle">DHCP</text>
+    <text x="70" y="176" font-family="monospace" font-size="10" fill="#ffffff80" text-anchor="middle">Attribution IP auto</text>
+
+    <!-- Block DNS -->
+    <rect x="160" y="140" width="140" height="50" rx="6" fill="#ffffff08" stroke="#e05a0040" stroke-width="1"/>
+    <text x="230" y="160" font-family="monospace" font-size="11" fill="#ff7b00" text-anchor="middle">DNS (Unbound)</text>
+    <text x="230" y="176" font-family="monospace" font-size="10" fill="#ffffff80" text-anchor="middle">Résolution de noms</text>
+  </g>
+
+  <!-- VirtualBox badge -->
+  <rect x="280" y="240" width="160" height="32" rx="16" fill="#ffffff10" stroke="#ffffff20" stroke-width="1"/>
+  <text x="360" y="261" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#ffffff80" text-anchor="middle">VirtualBox · Lab local</text>
+</svg>

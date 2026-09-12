@@ -41,7 +41,7 @@ const projects = [
   {
     name: "firewall-pfsense",
     title: "Pare-feu & Sécurité Réseau",
-    img: "pfsense.png",
+    img: "pfsense-banner.svg",
     desc: "Déploiement d'un pare-feu pfSense sous VirtualBox : configuration des interfaces WAN/LAN, règles de filtrage, NAT, DHCP et DNS. Supervision du trafic via le dashboard natif pfSense (graphiques, firewall logs, état des services).",
     link: "#",
     cat: "reseau"
