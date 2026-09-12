@@ -197,8 +197,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // --- Animation de frappe (hero tagline) ---
 (function() {
   const phrases = [
-    "Cybersécurité & Réseau & Programmation",
-    "L'avenir est numérique"
+    "Cybersécurité & Sécurité Réseau",
+    "Administrateur Systèmes & Réseaux"
   ];
   const el = document.querySelector('.typing-text');
   if (!el) return;
