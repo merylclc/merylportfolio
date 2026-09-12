@@ -24,9 +24,9 @@ const projects = [
   },
   {
     name: "segmentation-vlan",
-    title: "Segmentation Réseau VLAN",
-    img: "vlan-reseau.png",
-    desc: "Conception et configuration d'une infrastructure réseau segmentée avec des VLANs sur switches managés. Mise en place du routage inter-VLAN, configuration des ports trunk/access et des ACL pour isoler les différents périmètres (admin, utilisateurs, serveurs).",
+    title: "Infrastructure Réseau d'Entreprise",
+    img: "maquette-entreprise-banner.png",
+    desc: "Conception et simulation d'un réseau d'entreprise complet sous Cisco Packet Tracer (module RSX101 - CNAM) : deux sites reliés par trunk, VLANs (Administration, Comptabilité, Serveurs), routage dynamique RIP, DHCP, NAT, DNS et SSH.",
     link: "#",
     cat: "reseau"
   },
