@@ -15,6 +15,14 @@
 // Exemple de projets (à personnaliser)
 const projects = [
   {
+    name: "ftp-wireshark",
+    title: "Transfert FTP & Analyse Wireshark",
+    img: "filezilla-banner.svg",
+    desc: "Mise en place d'un serveur FTP FileZilla entre deux PCs du même réseau, avec capture du trafic via Wireshark. Démonstration concrète que les identifiants et fichiers transitent en clair sur le réseau avec FTP.",
+    link: "#",
+    cat: "reseau"
+  },
+  {
     name: "infra-active-directory",
     title: "Infrastructure Active Directory",
     img: "active-directory.png",
@@ -35,14 +43,6 @@ const projects = [
     title: "Pare-feu & Sécurité Réseau",
     img: "pfsense.png",
     desc: "Déploiement et configuration d'un pare-feu pfSense : définition des règles de filtrage par interface, mise en place du NAT, configuration d'un VPN et supervision du trafic réseau en temps réel pour sécuriser un périmètre LAN/WAN.",
-    link: "#",
-    cat: "reseau"
-  },
-  {
-    name: "ftp-wireshark",
-    title: "Transfert FTP & Analyse Wireshark",
-    img: "filezilla-banner.svg",
-    desc: "Mise en place d'un serveur FTP FileZilla entre deux PCs du même réseau, avec capture du trafic via Wireshark. Démonstration concrète que les identifiants et fichiers transitent en clair sur le réseau avec FTP.",
     link: "#",
     cat: "reseau"
   },
