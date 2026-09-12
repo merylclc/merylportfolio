@@ -92,8 +92,8 @@ const projects = [
   {
     name: "firewall-pfsense",
     title: "Pare-feu & Supervision Réseau",
-    banner: "pfsense-banner.svg",
-    img: "pfsense-banner.svg",
+    banner: "pfsense-dashboard.png",
+    img: "pfsense-dashboard.png",
     desc: "Déploiement et configuration d'un pare-feu pfSense sous VirtualBox en lab local. Le projet couvre la configuration des interfaces WAN et LAN, la mise en place des règles de filtrage, du NAT et des services réseau (DHCP, DNS). La supervision du trafic est assurée via le dashboard natif de pfSense : graphiques WAN/LAN en temps réel, logs du pare-feu et état des services.",
     vision: "Mettre en place une sécurité périmétrique complète en conditions réelles : configurer un pare-feu open source, appliquer des règles de filtrage précises et surveiller le trafic réseau via les outils intégrés de pfSense pour comprendre concrètement comment un pare-feu protège un réseau.",
     stack: ["pfSense", "VirtualBox", "DHCP", "DNS (Unbound)"],
