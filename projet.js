@@ -51,20 +51,20 @@ const projects = [
   },
   {
     name: "segmentation-vlan",
-    title: "Segmentation Réseau VLAN",
+    title: "Maquette Réseau d'Entreprise",
     banner: "vlan-reseau.png",
     img: "vlan-reseau.png",
-    desc: "Conception et mise en œuvre d'une infrastructure réseau segmentée avec deux VLANs sur switches managés Cisco 2960, reliés par un lien trunk. Le projet couvre la création des VLANs (VLAN 10 — réseau 10.0.0.0/24 et VLAN 20 — réseau 172.16.0.0/24), la configuration des ports access pour les postes clients et la mise en place du lien trunk avec trames taggées entre les deux switches.",
-    vision: "Comprendre et appliquer la segmentation réseau comme levier de sécurité et de performance, en isolant des périmètres distincts pour limiter la propagation des menaces et maîtriser les flux entre équipements.",
-    stack: ["Cisco IOS", "Cisco 2960", "VLAN", "Trunk 802.1Q", "Packet Tracer"],
+    desc: "Conception d'une maquette réseau d'entreprise sous Cisco Packet Tracer, simulant une infrastructure réelle avec deux départements isolés via des VLANs. La topologie reproduit un environnement professionnel avec deux switches managés Cisco 2960, deux VLANs distincts (VLAN 10 — réseau 10.0.0.0/24 pour un service, VLAN 20 — réseau 172.16.0.0/24 pour un autre), reliés par un lien trunk 802.1Q.",
+    vision: "Simuler une infrastructure réseau d'entreprise réaliste pour comprendre et appliquer la segmentation réseau comme levier de sécurité et d'organisation : isoler des périmètres distincts (par service, par usage) pour limiter la propagation des menaces et maîtriser les flux entre équipements.",
+    stack: ["Cisco Packet Tracer", "Cisco IOS", "Cisco 2960", "VLAN", "Trunk 802.1Q"],
     features: [
-      "Création de deux VLANs : VLAN 10 (10.0.0.0/24) et VLAN 20 (172.16.0.0/24)",
+      "Conception d'une topologie réseau d'entreprise complète sous Cisco Packet Tracer",
+      "Création de deux VLANs représentant deux services distincts : VLAN 10 (10.0.0.0/24) et VLAN 20 (172.16.0.0/24)",
       "Configuration des ports access sur chaque switch pour affecter les postes clients au bon VLAN",
       "Mise en place du lien trunk 802.1Q (Tagged Frames) entre Switch1 et Switch2 via F0/24",
-      "Les PCs du même VLAN communiquent entre switches via le trunk",
-      "Isolation complète entre VLAN 10 et VLAN 20 — aucun flux direct possible",
-      "Tests de connectivité intra-VLAN validés par ping entre PC1↔PC2 et PC3↔PC4",
-      "Simulation réalisée sous Cisco Packet Tracer"
+      "Les postes du même VLAN communiquent entre eux via le trunk, quel que soit le switch auquel ils sont connectés",
+      "Isolation complète entre les deux services — aucun flux direct possible entre VLAN 10 et VLAN 20",
+      "Tests de connectivité intra-VLAN validés par ping : PC1↔PC2 (VLAN 10) et PC3↔PC4 (VLAN 20)"
     ],
     link: "#"
   },
