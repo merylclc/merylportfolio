@@ -70,19 +70,21 @@ const projects = [
   },
   {
     name: "firewall-pfsense",
-    title: "Pare-feu & Sécurité Réseau",
+    title: "Pare-feu & Supervision Réseau",
     banner: "pfsense.png",
     img: "pfsense.png",
-    desc: "Déploiement et configuration d'un pare-feu pfSense avec remontée des logs vers Grafana pour la supervision et l'analyse du trafic réseau. Les données pfSense sont collectées et visualisées dans un dashboard Grafana offrant une vue en temps réel du trafic réseau et de l'activité du pare-feu.",
-    vision: "Appréhender la sécurité périmétrique en conditions réelles : apprendre à configurer un pare-feu open source et à exploiter ses logs via un outil de visualisation professionnel comme Grafana, pour surveiller et analyser le trafic réseau.",
-    stack: ["pfSense", "Grafana", "NAT", "Règles de filtrage"],
+    desc: "Déploiement d'un pare-feu pfSense en lab local sous VirtualBox, avec supervision du trafic réseau via une stack InfluxDB + Grafana. pfSense exporte ses métriques vers InfluxDB grâce au package natif intégré, et Grafana interroge cette base pour afficher un dashboard en temps réel du trafic LAN/WAN, des états de connexion et de la charge du pare-feu.",
+    vision: "Mettre en place une sécurité périmétrique complète en conditions réelles à la maison : configurer un pare-feu open source, appliquer des règles de filtrage précises, et exploiter les données réseau via des outils professionnels de supervision pour comprendre et analyser le trafic.",
+    stack: ["pfSense", "VirtualBox", "InfluxDB", "Grafana"],
     features: [
-      "Configuration du pare-feu pfSense : interfaces WAN, LAN, règles de filtrage",
-      "Configuration du NAT pour l'accès internet des postes clients",
-      "Remontée des logs pfSense vers Grafana pour la centralisation et la visualisation",
-      "Dashboard Grafana avec graphiques de trafic réseau en temps réel",
-      "Suivi de l'activité du pare-feu et du trafic LAN/WAN",
-      "Blocage de plages IP et réduction de la surface d'attaque"
+      "Installation de pfSense sur VirtualBox avec deux interfaces réseau : WAN (accès internet) et LAN (réseau local)",
+      "Configuration du NAT pour permettre aux postes du LAN d'accéder à internet via le pare-feu",
+      "Mise en place de règles de filtrage par port, protocole et adresse IP (ex : blocage Telnet port 23, restriction de flux sortants)",
+      "Installation du package InfluxDB natif sur pfSense pour l'export automatique des métriques réseau",
+      "Configuration d'InfluxDB en local comme base de données de séries temporelles pour stocker les métriques pfSense",
+      "Connexion de Grafana à InfluxDB comme source de données et création d'un dashboard de supervision",
+      "Dashboard Grafana : trafic entrant/sortant en temps réel, nombre d'états de connexion actifs, charge CPU et RAM du pare-feu",
+      "Tests de connectivité et validation des règles de filtrage depuis les postes clients du LAN"
     ],
     link: "#"
   },
