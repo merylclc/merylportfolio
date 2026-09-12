@@ -39,6 +39,14 @@ const projects = [
     cat: "reseau"
   },
   {
+    name: "ftp-wireshark",
+    title: "Transfert FTP & Analyse Wireshark",
+    img: "filezilla-banner.svg",
+    desc: "Mise en place d'un serveur FTP FileZilla entre deux PCs du même réseau, avec capture du trafic via Wireshark. Démonstration concrète que les identifiants et fichiers transitent en clair sur le réseau avec FTP.",
+    link: "#",
+    cat: "reseau"
+  },
+  {
     name: "nmap-scanner",
     title: "Mini Scanner TCP",
     img: "nmap-scanner.png",

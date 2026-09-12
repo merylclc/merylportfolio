@@ -90,6 +90,26 @@ const projects = [
     link: "#"
   },
   {
+    name: "ftp-wireshark",
+    title: "Transfert FTP & Analyse Wireshark",
+    banner: "filezilla-banner.svg",
+    img: "filezilla-banner.svg",
+    desc: "Mise en place d'un serveur FTP avec FileZilla Server sur un PC et connexion depuis un second PC du même réseau via FileZilla Client pour transférer des fichiers. Wireshark est utilisé en parallèle pour capturer le trafic réseau et analyser les paquets FTP en temps réel — révélant que les identifiants et les données transitent en clair sur le réseau.",
+    vision: "Comprendre concrètement pourquoi le protocole FTP est considéré comme non sécurisé : en capturant les paquets avec Wireshark, on observe directement le login, le mot de passe et le contenu des fichiers transférés en clair. Une démonstration pratique qui illustre l'importance du chiffrement et des alternatives sécurisées comme SFTP ou FTPS.",
+    stack: ["FileZilla Server", "FileZilla Client", "Wireshark", "FTP"],
+    features: [
+      "Installation et configuration de FileZilla Server sur un PC (serveur FTP local)",
+      "Création d'un utilisateur FTP avec permissions sur un répertoire partagé",
+      "Connexion depuis un second PC du même réseau via FileZilla Client",
+      "Transfert de fichiers entre les deux machines via le protocole FTP (port 21)",
+      "Capture du trafic réseau en temps réel avec Wireshark",
+      "Observation des identifiants (USER/PASS) et du contenu transféré en clair dans les paquets",
+      "Démonstration concrète des risques du protocole FTP non chiffré",
+      "Identification des alternatives sécurisées : SFTP (port 22) et FTPS (TLS)"
+    ],
+    link: "#"
+  },
+  {
     name: "nmap-scanner",
     title: "Mini Scanner TCP",
     banner: "nmap-scanner.png",
